@@ -10,11 +10,7 @@
 
 ### 1. Install [`discord-chat-exporter-cli`](https://github.com/Tyrrrz/DiscordChatExporter)
 
-```bash
-dotnet tool install --global DiscordChatExporter.CLI
-```
-
-Or download a standalone binary from their [Releases](https://github.com/Tyrrrz/DiscordChatExporter/releases).
+download a standalone binary from their [Releases](https://github.com/Tyrrrz/DiscordChatExporter/releases).
 
 ---
 
@@ -23,8 +19,9 @@ Or download a standalone binary from their [Releases](https://github.com/Tyrrrz/
 ```bash
 discord-chat-exporter-cli export \
   -t "YOUR_DISCORD_TOKEN" \
-  -c YOUR_CHANNEL_ID \
+  -c DISCORD_CHANNEL_ID \
   --media \
+ -f Json \
   -o media.json
 ```
 
@@ -91,7 +88,7 @@ You’ll be prompted step-by-step:
 ✔ Path to Discord JSON file
 ✔ Folder containing media files
 ✔ Telegram Bot token
-✔ Telegram Chat ID
+✔ Telegram chat ID
 ✔ Delay between messages
 ✔ Send newest messages first?
 ✔ Enable verbose logging?
