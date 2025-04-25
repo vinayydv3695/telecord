@@ -46,7 +46,7 @@ discord-chat-exporter-cli export \
 **Manual installation (for now):**
 
 ```bash
-git clone https://github.com/yourusername/telecord
+git clone https://github.com/Vinayydv3695/telecord
 cd telecord
 npm install
 npm link
