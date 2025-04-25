@@ -1,0 +1,42 @@
+{
+  "messages": [
+    {
+      "id": "1234567890",
+      "author": {
+        "username": "User1",
+        "discriminator": "0001",
+        "avatar": "https://cdn.discordapp.com/avatars/1234567890/abcdefg.png"
+      },
+      "content": "This is a sample message",
+      "timestamp": "2023-04-25T12:34:56Z",
+      "media": [
+        {
+          "type": "image",
+          "url": "https://cdn.discordapp.com/attachments/1234567890/9876543210/sampleimage.png",
+          "filename": "sampleimage.png",
+          "size": 123456,
+          "filetype": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "9876543210",
+      "author": {
+        "username": "User2",
+        "discriminator": "1234",
+        "avatar": "https://cdn.discordapp.com/avatars/9876543210/abcdefg.png"
+      },
+      "content": "Here is another message",
+      "timestamp": "2023-04-25T13:40:00Z",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://cdn.discordapp.com/attachments/9876543210/1234567890/samplevideo.mp4",
+          "filename": "samplevideo.mp4",
+          "size": 9876543,
+          "filetype": "video/mp4"
+        }
+      ]
+    }
+  ]
+}
