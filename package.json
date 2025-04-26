@@ -4,7 +4,7 @@
   "description": "Export Discord chat from JSON to Telegram via CLI",
   "main": "telecord.js",
   "bin": {
-    "telecord": "./telecord.mjs"
+    "telecord": "./telecord.js"
   },
   "type": "module",
   "dependencies": {
