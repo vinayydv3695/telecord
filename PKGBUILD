@@ -9,27 +9,31 @@ license=('MIT')
 depends=('nodejs')
 makedepends=('npm')
 
-source=(
-  "https://github.com/vinayydv3695/telecord/archive/refs/tags/v${pkgver}.tar.gz"
-)
-sha256sums=('SKIP')  # Replace with real sha256sum for strict integrity
+source=("https://github.com/vinayydv3695/telecord/archive/refs/tags/v${pkgver}.tar.gz")
+sha256sums=('SKIP') # (later add real sha256sum)
 
 build() {
-  cd "telecord-${pkgver}"
+  cd "${pkgname}-${pkgver}"
   npm install --omit=dev
 }
 
 package() {
-  cd "telecord-${pkgver}"
+  cd "${pkgname}-${pkgver}"
 
-  # install the CLI entrypoint
-  install -Dm755 bin/telecord.js "$pkgdir/usr/bin/telecord"
+  # Install the executable script
+  install -Dm755 bin/telecord.mjs "$pkgdir/usr/bin/telecord"
 
-  # install the library files
-  install -d "$pkgdir/usr/lib/$pkgname/lib"
-  cp -r lib/* "$pkgdir/usr/lib/$pkgname/lib/"
+  # Install lib/ and other files into /usr/lib/telecord
+  mkdir -p "$pkgdir/usr/lib/$pkgname"
+  cp -r lib "$pkgdir/usr/lib/$pkgname/"
+  cp -r assets "$pkgdir/usr/lib/$pkgname/"
+  cp package.json "$pkgdir/usr/lib/$pkgname/"
+  cp package-lock.json "$pkgdir/usr/lib/$pkgname/"
 
-  # docs
+  # Install node_modules (needed for runtime!)
+  cp -r node_modules "$pkgdir/usr/lib/$pkgname/"
+
+  # Install README
   install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
 }
 
