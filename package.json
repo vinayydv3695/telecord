@@ -5,7 +5,6 @@
   "bin": {
     "telecord": "./bin/telecord.mjs"
   },
-  "type": "module",
   "scripts": {
     "start": "node ./bin/telecord.mjs"
   },
