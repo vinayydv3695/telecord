@@ -44,19 +44,13 @@ Examples:
 
 program.parse(process.argv);
 
-/**
- * If interactive mode is enabled, prompt the user for each option.
- * Otherwise, just return the parsed flags.
- */
 async function getOptions() {
   const opts = program.opts();
 
   if (!opts.interactive) {
-    // Non-interactive: return what's on the command line
     return opts;
   }
 
-  // Interactive: ask for each value, with defaults from any flags
   const answers = await inquirer.prompt([
     {
       type: "input",
@@ -85,7 +79,7 @@ async function getOptions() {
     {
       type: "input",
       name: "chat",
-      message: "Discord  Chat ID:",
+      message: "Discord Chat ID:",
       default: opts.chat,
       validate: (i) => (/^-?\d+$/.test(i) ? true : "Chat ID must be numeric"),
     },
@@ -116,10 +110,8 @@ async function getOptions() {
 
 (async () => {
   try {
-    // Gather flags or interactive answers
     const opts = await getOptions();
 
-    // In non-interactive mode, ensure required flags are present
     if (!opts.interactive) {
       const missing = [];
       if (!opts.file) missing.push("--file");
@@ -132,17 +124,14 @@ async function getOptions() {
       }
     }
 
-    // Validate inputs
     validateToken(opts.token);
     validateFile(path.resolve(opts.file));
     validateFolder(path.resolve(opts.media));
     validateChatId(opts.chat);
 
-    // Configure verbose logger
     configureLogger(opts.verbose);
     if (opts.verbose) info("Verbose logging enabled");
 
-    // Build config
     const config = {
       file: path.resolve(opts.file),
       media: path.resolve(opts.media),
@@ -152,7 +141,6 @@ async function getOptions() {
       reverse: opts.reverse,
     };
 
-    // Run the export
     await runTelecord(config);
     info("✅ Finished without errors.");
     process.exit(0);

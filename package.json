@@ -1,13 +1,22 @@
 {
   "name": "telecord",
   "version": "1.0.0",
-  "description": "Export Discord chats (with media) to Telegram.",
+  "description": "A CLI tool to export Discord chats (with media) to Telegram.",
+  "type": "module",
   "bin": {
-    "telecord": "./bin/telecord.mjs"
+    "telecord": "./bin/telecord.js"
   },
   "scripts": {
-    "start": "node ./bin/telecord.mjs"
+    "start": "node ./bin/telecord.js"
   },
+  "keywords": [
+    "discord",
+    "telegram",
+    "chat-export",
+    "media",
+    "cli",
+    "converter"
+  ],
   "dependencies": {
     "commander": "^11.0.0",
     "inquirer": "^9.0.0"
