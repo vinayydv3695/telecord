@@ -1,3 +1,10 @@
+Here's the content saved into a `README.md` file format. You can copy this and save it directly as a file named `README.md` in your project root.
+
+---
+
+**📁 File: `README.md`**
+
+````markdown
 # 📤 Telecord
 
 **Export Discord chats (JSON + media) to Telegram using a simple CLI tool.**
@@ -10,7 +17,7 @@
 
 ### 1. Install [`discord-chat-exporter-cli`](https://github.com/Tyrrrz/DiscordChatExporter)
 
-download a standalone binary from their [Releases](https://github.com/Tyrrrz/DiscordChatExporter/releases).
+Download a standalone binary from their [Releases](https://github.com/Tyrrrz/DiscordChatExporter/releases).
 
 ---
 
@@ -21,9 +28,10 @@ discord-chat-exporter-cli export \
   -t "YOUR_DISCORD_TOKEN" \
   -c DISCORD_CHANNEL_ID \
   --media \
- -f Json \
+  -f Json \
   -o media.json
 ```
+````
 
 > This will create:
 >
@@ -34,13 +42,17 @@ discord-chat-exporter-cli export \
 
 ## 🛠 Installation
 
-**Coming soon to:**
+### ✅ Arch Linux (via AUR)
 
-- [ ] AUR (Arch User Repository)
-- [ ] Nix
-- [ ] Other Linux distros
+If you're on Arch or an Arch-based distro, install Telecord using:
 
-**Manual installation (for now):**
+```bash
+yay -S telecord
+```
+
+---
+
+### Manual installation (for other systems)
 
 ```bash
 git clone https://github.com/Vinayydv3695/telecord
@@ -66,7 +78,7 @@ telecord -f media.json -m media.json_Files -t <TELEGRAM_BOT_TOKEN> -c <CHAT_ID>
 | `--file <path>`     | `-f`  | Path to Discord JSON file                       |
 | `--media <path>`    | `-m`  | Path to media folder (e.g., `media.json_Files`) |
 | `--token <string>`  | `-t`  | Your Telegram bot token                         |
-| `--chat <id>`       | `-c`  | Discord Channel ID (e.g., `-1001234567890`)     |
+| `--chat <id>`       | `-c`  | Telegram Chat ID (e.g., `-1001234567890`)       |
 | `--delay <seconds>` | `-d`  | Delay between messages (default: 1)             |
 | `--reverse`         | `-r`  | Send messages from newest to oldest             |
 | `--verbose`         | `-v`  | Enable detailed logs                            |
@@ -82,7 +94,7 @@ No need to remember flags. Just run:
 telecord --interactive
 ```
 
-You’ll be prompted step-by-step:
+You'll be prompted step-by-step:
 
 ```
 ✔ Path to Discord JSON file
@@ -122,7 +134,19 @@ It uses:
 
 ## 📸 Screenshots
 
-<!-- Paste screenshots and videos here -->
+> Real screenshots of Telecord in action:
+
+<img src="assets/Screenshots/250425_11h44m09s_screenshot.png" width="700"/>
+<br/>
+<img src="assets/Screenshots/250425_11h44m52s_screenshot.png" width="700"/>
+<br/>
+<img src="assets/Screenshots/250425_11h49m12s_screenshot.png" width="700"/>
+<br/>
+<img src="assets/Screenshots/250425_11h51m04s_screenshot.png" width="700"/>
+<br/>
+<img src="assets/Screenshots/250425_12h00m45s_screenshot.png" width="700"/>
+<br/>
+<img src="assets/Screenshots/250425_12h03m23s_screenshot.png" width="700"/>
 
 ---
 
@@ -156,5 +180,10 @@ THE SOFTWARE.
 
 ## 👤 Author
 
-Made with ❤️ by **Vinay**  
-[GitHub](https://github.com/Vinayydv3695)
+Made with ❤️ by **Vinay**
+[GitHub – @vinayydv3695](https://github.com/Vinayydv3695)
+
+```
+
+
+```
