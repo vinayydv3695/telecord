@@ -1,10 +1,3 @@
-Here's the content saved into a `README.md` file format. You can copy this and save it directly as a file named `README.md` in your project root.
-
----
-
-**📁 File: `README.md`**
-
-````markdown
 # 📤 Telecord
 
 **Export Discord chats (JSON + media) to Telegram using a simple CLI tool.**
@@ -31,6 +24,7 @@ discord-chat-exporter-cli export \
   -f Json \
   -o media.json
 ```
+
 ````
 
 > This will create:
@@ -187,3 +181,4 @@ Made with ❤️ by **Vinay**
 
 
 ```
+````
