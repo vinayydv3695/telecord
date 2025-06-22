@@ -25,10 +25,7 @@ discord-chat-exporter-cli export \
   -o media.json
 ```
 
-````
-
 > This will create:
->
 > - `media.json` – your exported messages
 > - `media.json_Files/` – folder containing any media (images, attachments, etc.)
 
@@ -68,7 +65,7 @@ telecord -f media.json -m media.json_Files -t <TELEGRAM_BOT_TOKEN> -c <CHAT_ID>
 ### Options
 
 | Option              | Alias | Description                                     |
-| ------------------- | ----- | ----------------------------------------------- |
+|---------------------|-------|-------------------------------------------------|
 | `--file <path>`     | `-f`  | Path to Discord JSON file                       |
 | `--media <path>`    | `-m`  | Path to media folder (e.g., `media.json_Files`) |
 | `--token <string>`  | `-t`  | Your Telegram bot token                         |
@@ -119,7 +116,6 @@ telecord -f media.json -m media.json_Files -t 123456:ABCDEF123 -c -1009876543210
 5. You can control the delay, order, and see progress in real-time
 
 It uses:
-
 - Telegram's Bot API (via [Axios](https://github.com/axios/axios))
 - Graceful error handling
 - Verbose logging for debugging
@@ -174,11 +170,5 @@ THE SOFTWARE.
 
 ## 👤 Author
 
-Made with ❤️ by **Vinay**
+Made with ❤️ by **Vinay**  
 [GitHub – @vinayydv3695](https://github.com/Vinayydv3695)
-
-```
-
-
-```
-````
