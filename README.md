@@ -1,12 +1,12 @@
-# 📤 Telecord
+# Telecord
 
 **Export Discord chats (JSON + media) to Telegram using a simple CLI tool.**
 
-> ⚠️ This tool depends on [`discord-chat-exporter-cli`](https://github.com/Tyrrrz/DiscordChatExporter) for exporting your Discord messages first. Make sure to install and use that before proceeding.
+> This tool depends on [`discord-chat-exporter-cli`](https://github.com/Tyrrrz/DiscordChatExporter) for exporting your Discord messages first. Make sure to install and use that before proceeding.
 
---- 
+---
 
-## ✨ Features
+## Features
 
 *   **Export Discord chats to Telegram:** The core functionality of the tool.
 *   **Supports Media:** Export images, videos, and other attachments along with your messages.
@@ -15,9 +15,9 @@
 *   **Reverse Message Order:** Send messages from newest to oldest.
 *   **Verbose Logging:** Enable detailed logs for debugging.
 
---- 
+---
 
-## 📦 What You Need First
+## What You Need First
 
 ### 1. Install [`discord-chat-exporter-cli`](https://github.com/Tyrrrz/DiscordChatExporter)
 
@@ -49,9 +49,9 @@ discord-chat-exporter-cli export \
 > - `media.json` – your exported messages
 > - `media.json_Files/` – folder containing any media (images, attachments, etc.)
 
---- 
+---
 
-## 🛠 Installation
+## Installation
 
 Telecord is available on several platforms. Choose the one that best suits your system.
 
@@ -121,9 +121,9 @@ npm link
 ```
 > `npm link` creates a global symlink, allowing you to run `telecord` from any directory.
 
---- 
+---
 
-## 🚀 Usage
+## Usage
 
 ### Basic CLI Mode
 
@@ -144,9 +144,9 @@ telecord -f media.json -m media.json_Files -t <TELEGRAM_BOT_TOKEN> -c <CHAT_ID>
 | `--verbose`         | `-v`  | Enable detailed logs                            |
 | `--interactive`     |       | Launch step-by-step mode                        |
 
---- 
+---
 
-## 🧙 Interactive Mode
+## Interactive Mode
 
 No need to remember flags. Just run:
 
@@ -166,9 +166,9 @@ You'll be prompted step-by-step:
 ✔ Enable verbose logging?
 ```
 
---- 
+---
 
-## 🧪 Examples
+## Examples
 
 **Basic usage:**
 ```bash
@@ -180,9 +180,9 @@ telecord -f media.json -m media.json_Files -t 123456:ABCDEF123 -c -1009876543210
 telecord -f media.json -m media.json_Files -t 123456:ABCDEF123 -c -1009876543210 --delay 0.5 --reverse
 ```
 
---- 
+---
 
-## ⚙️ How It Works
+## How It Works
 
 1. You export your messages from Discord using `discord-chat-exporter-cli`
 2. Telecord parses the `.json` file
@@ -195,9 +195,9 @@ It uses:
 - Graceful error handling
 - Verbose logging for debugging
 
---- 
+---
 
-## 📸 Screenshots
+## Screenshots
 
 > Real screenshots of Telecord in action:
 
@@ -213,23 +213,23 @@ It uses:
 <br/>
 <img src="assets/Screenshots/250425_12h03m23s_screenshot.png" width="700"/>
 
---- 
+---
 
-## 🤔 Troubleshooting
+## Troubleshooting
 
 *   **401 Unauthorized Error:** This usually means your Telegram bot token is incorrect. Double-check your token and try again.
 *   **File not found:** Make sure you're providing the correct path to your `media.json` file and `media.json_Files` folder.
 *   **Rate-limiting:** If you're sending a lot of messages, you might get rate-limited by the Telegram API. Try increasing the delay between messages using the `--delay` option.
 
---- 
+---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue on the [GitHub repository](https://github.com/vinayydv3695/telecord/issues).
 
---- 
+---
 
-## 🧾 License
+## License
 
 MIT License
 
@@ -255,11 +255,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ```
 
---- 
+---
 
-## 👤 Author
+## Author
 
-Made with ❤️ by **Vinay**  
+Made with by **Vinay**  
 [GitHub – @vinayydv3695](https://github.com/Vinayydv3695)
 
 ```

@@ -142,7 +142,7 @@ async function getOptions() {
     };
 
     await runTelecord(config);
-    info("✅ Finished without errors.");
+    info("Finished without errors.");
     process.exit(0);
   } catch (err) {
     error(`Telecord error: ${err.message}`);
