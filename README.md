@@ -4,17 +4,37 @@
 
 > ⚠️ This tool depends on [`discord-chat-exporter-cli`](https://github.com/Tyrrrz/DiscordChatExporter) for exporting your Discord messages first. Make sure to install and use that before proceeding.
 
----
+--- 
+
+## ✨ Features
+
+*   **Export Discord chats to Telegram:** The core functionality of the tool.
+*   **Supports Media:** Export images, videos, and other attachments along with your messages.
+*   **Interactive & CLI Modes:** Use the interactive mode for a step-by-step guide or the CLI for automation.
+*   **Customizable Message Delay:** Set a delay between messages to avoid rate limiting.
+*   **Reverse Message Order:** Send messages from newest to oldest.
+*   **Verbose Logging:** Enable detailed logs for debugging.
+
+--- 
 
 ## 📦 What You Need First
 
 ### 1. Install [`discord-chat-exporter-cli`](https://github.com/Tyrrrz/DiscordChatExporter)
 
-Download a standalone binary from their [Releases](https://github.com/Tyrrrz/DiscordChatExporter/releases).
+Download a standalone binary from their [Releases page](https://github.com/Tyrrrz/DiscordChatExporter/releases).
 
----
+### 2. Get your Discord Token
 
-### 2. Export your Discord chat
+You'll need your Discord token to export your chat history. You can find guides on how to get your token online. Please be careful with your token and do not share it with anyone.
+
+### 3. Get your Telegram Bot Token and Chat ID
+
+You'll need a Telegram bot token and a chat ID to send messages to your Telegram chat.
+
+*   **Bot Token:** Create a new bot by talking to the [BotFather](https://t.me/botfather) on Telegram. He will give you a token.
+*   **Chat ID:** You can get your chat ID by talking to the `@userinfobot` on Telegram.
+
+### 4. Export your Discord chat
 
 ```bash
 discord-chat-exporter-cli export \
@@ -29,7 +49,7 @@ discord-chat-exporter-cli export \
 > - `media.json` – your exported messages
 > - `media.json_Files/` – folder containing any media (images, attachments, etc.)
 
----
+--- 
 
 ## 🛠 Installation
 
@@ -41,9 +61,13 @@ If you're on Arch or an Arch-based distro, install Telecord using:
 yay -S telecord
 ```
 
----
+--- 
 
 ### Manual installation (for other systems)
+
+**Prerequisites:**
+*   [Node.js](https://nodejs.org/) (v14 or higher)
+*   [npm](https://www.npmjs.com/)
 
 ```bash
 git clone https://github.com/Vinayydv3695/telecord
@@ -51,8 +75,9 @@ cd telecord
 npm install
 npm link
 ```
+> `npm link` creates a symbolic link from the global `node_modules` directory to your local project directory. This allows you to run `telecord` from any directory on your system.
 
----
+--- 
 
 ## 🚀 Usage
 
@@ -75,7 +100,7 @@ telecord -f media.json -m media.json_Files -t <TELEGRAM_BOT_TOKEN> -c <CHAT_ID>
 | `--verbose`         | `-v`  | Enable detailed logs                            |
 | `--interactive`     |       | Launch step-by-step mode                        |
 
----
+--- 
 
 ## 🧙 Interactive Mode
 
@@ -97,15 +122,21 @@ You'll be prompted step-by-step:
 ✔ Enable verbose logging?
 ```
 
----
+--- 
 
-## 🧪 Example
+## 🧪 Examples
 
+**Basic usage:**
+```bash
+telecord -f media.json -m media.json_Files -t 123456:ABCDEF123 -c -1009876543210
+```
+
+**With a 0.5 second delay and reversed order:**
 ```bash
 telecord -f media.json -m media.json_Files -t 123456:ABCDEF123 -c -1009876543210 --delay 0.5 --reverse
 ```
 
----
+--- 
 
 ## ⚙️ How It Works
 
@@ -120,7 +151,7 @@ It uses:
 - Graceful error handling
 - Verbose logging for debugging
 
----
+--- 
 
 ## 📸 Screenshots
 
@@ -138,7 +169,21 @@ It uses:
 <br/>
 <img src="assets/Screenshots/250425_12h03m23s_screenshot.png" width="700"/>
 
----
+--- 
+
+## 🤔 Troubleshooting
+
+*   **401 Unauthorized Error:** This usually means your Telegram bot token is incorrect. Double-check your token and try again.
+*   **File not found:** Make sure you're providing the correct path to your `media.json` file and `media.json_Files` folder.
+*   **Rate-limiting:** If you're sending a lot of messages, you might get rate-limited by the Telegram API. Try increasing the delay between messages using the `--delay` option.
+
+--- 
+
+## 🤝 Contributing
+
+Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue on the [GitHub repository](https://github.com/vinayydv3695/telecord/issues).
+
+--- 
 
 ## 🧾 License
 
@@ -166,9 +211,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ```
 
----
+--- 
 
 ## 👤 Author
 
 Made with ❤️ by **Vinay**  
 [GitHub – @vinayydv3695](https://github.com/Vinayydv3695)
+
+```
