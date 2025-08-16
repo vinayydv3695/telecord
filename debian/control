@@ -1,0 +1,16 @@
+Source: telecord
+Section: utils
+Priority: optional
+Maintainer: Vinay <https://github.com/vinayydv3695>
+Build-Depends: debhelper-compat (= 13), nodejs, npm
+Standards-Version: 4.6.2
+Homepage: https://github.com/vinayydv3695/telecord
+
+Package: telecord
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, nodejs
+Description: Export Discord chats (JSON + media) to Telegram — including interactive mode
+ A CLI tool to export Discord chats (with media) to Telegram.
+ It can be run interactively to guide the user through the process of
+ exporting chat history and media files from a Discord channel and
+ sending them to a Telegram chat.

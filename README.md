@@ -53,17 +53,61 @@ discord-chat-exporter-cli export \
 
 ## 🛠 Installation
 
-### ✅ Arch Linux (via AUR)
+Telecord is available on several platforms. Choose the one that best suits your system.
 
-If you're on Arch or an Arch-based distro, install Telecord using:
+### Arch Linux (AUR)
+
+If you're on Arch or an Arch-based distro, you can install `telecord` from the Arch User Repository.
 
 ```bash
+# Using yay
 yay -S telecord
+
+# Using paru
+paru -S telecord
 ```
 
---- 
+### Debian / Ubuntu (.deb package)
 
-### Manual installation (for other systems)
+You can build a `.deb` package from the source.
+
+1.  **Install build dependencies:**
+    ```bash
+    sudo apt update && sudo apt install build-essential debhelper devscripts
+    ```
+
+2.  **Clone the repository and build the package:**
+    ```bash
+    git clone https://github.com/vinayydv3695/telecord.git
+    cd telecord
+    dpkg-buildpackage -us -uc
+    ```
+
+3.  **Install the generated package:**
+    The command will create a `.deb` file in the parent directory. Install it using `dpkg`. The version number may vary.
+    ```bash
+    sudo dpkg -i ../telecord_1.0.0-1_all.deb
+    ```
+
+### Nix / NixOS
+
+If you use the Nix package manager, you can build and install `telecord` directly from the repository.
+
+1.  **Build the package:**
+    This command will build the package and create a `./result` symlink to the output in the Nix store.
+    ```bash
+    nix-build
+    ```
+
+2.  **Install the package into your profile:**
+    This makes the `telecord` command available in your shell.
+    ```bash
+    nix-env -i -f .
+    ```
+
+### Manual Installation (Any System)
+
+If your system isn't listed above, you can install the tool manually with Node.js and npm.
 
 **Prerequisites:**
 *   [Node.js](https://nodejs.org/) (v14 or higher)
@@ -75,7 +119,7 @@ cd telecord
 npm install
 npm link
 ```
-> `npm link` creates a symbolic link from the global `node_modules` directory to your local project directory. This allows you to run `telecord` from any directory on your system.
+> `npm link` creates a global symlink, allowing you to run `telecord` from any directory.
 
 --- 
 

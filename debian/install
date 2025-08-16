@@ -1,0 +1,7 @@
+bin/telecord.js usr/bin/telecord
+lib usr/lib/telecord/
+assets usr/lib/telecord/
+package.json usr/lib/telecord/
+package-lock.json usr/lib/telecord/
+node_modules usr/lib/telecord/
+README.md usr/share/doc/telecord/
